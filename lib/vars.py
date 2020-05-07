@@ -1,10 +1,12 @@
-alphabet = ["a", "b" ]
-F 	G 	H 	I 	J
+eng_alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 
-K 	L 	M 	N 	O
+swe_alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "å", "ä", "ö"]
 
-P 	Q 	R 	S 	T
 
-U 	V 	W 	X 	Y
+# Definitions
+alphabet = dict()
 
-Z 	Å 	Ä 	Ö
+alphabet["ENG"] = eng_alphabet
+alphabet["SWE"] = swe_alphabet 
+
+# Functions
