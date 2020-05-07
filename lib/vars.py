@@ -10,3 +10,10 @@ alphabet["ENG"] = eng_alphabet
 alphabet["SWE"] = swe_alphabet 
 
 # Functions
+def listToString( l ):
+    returnStr = ""
+
+    for char in l:
+        returnStr += char
+
+    return returnStr
