@@ -8,6 +8,9 @@ if( inputHasKeys(["-k", "-i", "-a"]) ):
     in_alphabet = getValueOfKey("-a")
 else:
     print("file.py -k {int KEY} -i {string TXT} -a {string ALPHABET_TYPE}")
+    print("-k: The encryption/decryption key")
+    print("-i: The text to be encrypted/decrypted")
+    print("-a: The alphabet (SWE or ENG)")
     exit()
 
 alen = len(alphabet[in_alphabet])
@@ -15,15 +18,18 @@ alen = len(alphabet[in_alphabet])
 txt_list = list(in_txt)
 decryp_list = [""] * len(in_txt)
 
-for char in txt_list:
+charindex = -1
+for char in txt_list: # loop through all of the chars 
+    charindex = charindex + 1
+
     index = alphabet[in_alphabet].index(char)
-    print("Decrypting char-index: " + str(txt_list.index(char)) + " (" + char + ")")
+    print("Decrypting char-index: " + str(charindex) + " (" + char + ")")
 
     index = index + in_key # shift the alphabet
     while( index >= alen ): #cycle through the alphabet 
         diff = (index + in_key) - (alen - 1)
         index = 0 + diff # a bit spaghetti but who doesn't like spaghetti
 
-    decryp_list[txt_list.index(char)] = alphabet[in_alphabet][index]
+    decryp_list[charindex] = alphabet[in_alphabet][index]
 
 print( "Output: " + listToString(decryp_list) )
