@@ -26,7 +26,8 @@ for char in txt_list: # loop through all of the chars
     print("Decrypting char-index: " + str(charindex) + " (" + char + ")")
 
     index = index + in_key # shift the alphabet
-    while( index > alen - 1 ): #cycle through the alphabet 
+    while( index > alen - 1 ): #cycle through the alphabet
+        print("Alphabet cycle")
         index = (index + in_key) - (alen - 1)
 
     decryp_list[charindex] = alphabet[in_alphabet][index]
