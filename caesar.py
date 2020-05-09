@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from lib.input import *
 from lib.vars import alphabet
 from lib.vars import listToString

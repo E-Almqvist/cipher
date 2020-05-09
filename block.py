@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import math
 from lib.input import *
 from lib.vars import alphabet
