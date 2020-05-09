@@ -25,13 +25,14 @@ for char in txt_list: # loop through all of the chars
     charindex = charindex + 1
 
     index = alphabet[in_alphabet].index(char)
-    print("Decrypting char-index: " + str(charindex) + " (" + char + ")")
+    print("Decrypting char-index: " + str(charindex) + " (" + char + ":" + str(index) + ")")
 
     index = index + in_key # shift the alphabet
     while( index > alen - 1 ): #cycle through the alphabet
-        print("Alphabet cycle")
-        index = index - (alen - 1)
-
-    decryp_list[charindex] = alphabet[in_alphabet][index]
+        index = index - alen
+        print("     Alphabet cycle, index: " + str(index))
+    
+    charDe = alphabet[in_alphabet][index]
+    decryp_list[charindex] = charDe 
 
 print( "Output: " + listToString(decryp_list) )
