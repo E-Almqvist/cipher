@@ -23,15 +23,18 @@ def keyToIntTuple(key):
 def applyKeyToBlock(keyT, blockL): # function to apply a key to a block
     blockDe = [""] * blockSize
     if(in_mode == 0):
+        print("Encrypting block: " + str(blockL) )
         for i in range(blockSize):
             blockDe[i] = blockL[keyT[i]] # encrypting
     elif(in_mode == 1):
+        print("Decrypting block: " + str(blockL) )
         for i in range(blockSize):
             blockDe[keyT[i]] = blockL[i] # decrypting
 
     return blockDe
 
 def splitInput(inputL, n):
+    print("Splitting input: " + str(n))
     out = []
     inputLen = len(inputL)
     x = inputLen / float(n)
