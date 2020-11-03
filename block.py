@@ -38,7 +38,7 @@ def splitInput(inputL, n):
     out = []
     inputLen = len(inputL)
     x = inputLen / float(n)
-    
+
     last = 0.0
     while last < inputLen:
         out.append( inputL[ int(last):int(last + x) ] )
@@ -66,7 +66,7 @@ if( math.floor(amountBlocks) != math.ceil(amountBlocks) ):
     exit()
 
 Blocks = splitInput(TXT, amountBlocks)
-BlocksDe = [None] * len(Blocks) 
+BlocksDe = [None] * len(Blocks)
 
 count = -1
 for block in Blocks:
